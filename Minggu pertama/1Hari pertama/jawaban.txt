@@ -1,0 +1,16 @@
+1. Apa itu GIT
+2. Apa itu Gitlab
+3. Apa fungsi dari kode git add
+4. Apa fungsi dari kode git commit
+5. Apa fungsi dari kode git push
+
+Jawab:
+1.GIT adalah sistem kontrol versi yang digunakan untuk mengelola perubahan pada suatu proyek perangkat lunak. Dengan menggunakan GIT, pengembang dapat melacak perubahan, mengkoordinasikan pekerjaan dengan tim, dan mengembalikan ke versi sebelumnya jika diperlukan. GIT juga memungkinkan untuk bekerja secara terdistribusi, sehingga setiap anggota tim dapat memiliki salinan lengkap dari repositori proyek.
+
+2.GitLab adalah platform manajemen kode sumber yang memungkinkan pengembang dan tim untuk berkolaborasi dalam mengembangkan perangkat lunak. GitLab menyediakan fitur-fitur seperti repositori Git, pelacakan isu, sistem CI/CD (Continuous Integration/Continuous Deployment), manajemen proyek, dan banyak lagi. Dengan GitLab, tim pengembang dapat bekerja bersama dalam mengelola dan mengembangkan proyek perangkat lunak.
+
+3.Kode git add digunakan untuk menambahkan perubahan pada file ke dalam index. Ketika Anda melakukan perubahan pada file dalam repositori Git, perubahan tersebut tidak secara otomatis disertakan dalam commit. Anda perlu menggunakan perintah git add untuk memasukkan perubahan tersebut ke dalam index. Ini memungkinkan Anda untuk memilih perubahan mana yang akan disertakan dalam commit berikutnya.
+
+4.Kode git commit digunakan untuk membuat commit baru dengan perubahan yang ada di dalam index. Setelah Anda menggunakan perintah git add untuk menambahkan perubahan ke dalam index, perintah git commit digunakan untuk membuat snapshot dari perubahan tersebut. Commit adalah tindakan penting dalam Git yang merekam status proyek pada saat tertentu. Anda dapat memberikan pesan komit untuk menjelaskan perubahan yang Anda lakukan.
+
+5.Kode git push digunakan untuk mengirimkan perubahan lokal yang sudah dicommit ke repositori jarak jauh (remote repository). Setelah Anda melakukan commit, perintah git push akan mengunggah perubahan tersebut ke repositori yang dituju. Ini memperbarui repositori jarak jauh dengan perubahan yang telah Anda lakukan secara lokal, sehingga anggota tim lainnya dapat melihat dan mengakses perubahan tersebut.
