@@ -5,11 +5,12 @@ from dotenv import dotenv_values
 params = {
     "db": dotenv_values(".env")
 }
+print(params['db'].keys())
+db_user = params['db']['MYSQL_USERNAME']
+db_password = params['db']['MYSQL_PASSWORD']
+db_host = params['db']['MYSQL_HOST']
+db_port = params['db']['MYSQL_PORT']
 
-db_user = params['db']['root']
-db_password = params['db']['bobotoh93']
-db_host = params['db']['localhost']
-db_port = params['db']['3306']
 
 db = connect(
     host=db_host,
