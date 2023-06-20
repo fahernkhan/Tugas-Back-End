@@ -3,7 +3,7 @@ from dotenv import dotenv_values
 
 # Membuat koneksi database
 params = {
-    "db": dotenv_values("tugas10.env")
+    "db": dotenv_values(".env")
 }
 
 db_user = params['db']['root']
