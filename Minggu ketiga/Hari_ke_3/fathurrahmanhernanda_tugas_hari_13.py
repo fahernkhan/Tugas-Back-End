@@ -32,7 +32,6 @@ faskes_sorted_by_vaksin1 = sorted(faskes_data, key=lambda x: x.get("vaksinasi1_s
 print("Faskes dengan total sukses vaksin 1 terbanyak:")
 for faskes in faskes_sorted_by_vaksin1[:5]:
     print("Nama Faskes:", faskes.get("nama"))
-    print("Total Sukses Vaksin 1:", faskes.get("true"))
     print("---")
 
 print("\n")
@@ -44,6 +43,5 @@ faskes_sorted_by_vaksin2 = sorted(faskes_data, key=lambda x: x.get("vaksinasi2_s
 print("Faskes dengan total sukses vaksin 2 terbanyak:")
 for faskes in faskes_sorted_by_vaksin2[:5]:
     print("Nama Faskes:", faskes.get("nama"))
-    print("Total Sukses Vaksin 2:", faskes.get("true"))
     print("---")
 
