@@ -16,20 +16,34 @@ response = requests.get(url, params=params, headers=headers)
 
 print(response.status_code)
 print(response.text)
+text = json.dumps(response.json(), sort_keys=True, indent=4)
+print(text)
+print("\n")
 
+# Ambil data JSON dari respons
+data = response.json()
+# Ambil data faskes vaksinasi saja dari respons
+faskes_data = data.get("data", [])
 
+# Sort data berdasarkan total sukses vaksin 1
+faskes_sorted_by_vaksin1 = sorted(faskes_data, key=lambda x: x.get("vaksinasi1_sukses", 0), reverse=True)
 
-data = json.loads(response.text)
 # Tampilkan 5 faskes dengan total sukses vaksin 1 terbanyak
-data_faskes = data['data']
-sorted_faskes_vaksin1 = sorted(data_faskes, key=lambda x: x['detail'][0]['divaksin_1'], reverse=True)[:5]
-print("\n5 Faskes dengan total sukses vaksin 1 terbanyak:")
-for faskes in sorted_faskes_vaksin1:
-    print(f"- {faskes['nama']}: {faskes['detail'][0]['divaksin_1']} vaksin")
+print("Faskes dengan total sukses vaksin 1 terbanyak:")
+for faskes in faskes_sorted_by_vaksin1[:5]:
+    print("Nama Faskes:", faskes.get("nama"))
+    print("Total Sukses Vaksin 1:", faskes.get("true"))
+    print("---")
+
+print("\n")
+
+# Sort data berdasarkan total sukses vaksin 2
+faskes_sorted_by_vaksin2 = sorted(faskes_data, key=lambda x: x.get("vaksinasi2_sukses", 0), reverse=True)
 
 # Tampilkan 5 faskes dengan total sukses vaksin 2 terbanyak
-sorted_faskes_vaksin2 = sorted(data_faskes, key=lambda x: x['detail'][0]['divaksin_2'], reverse=True)[:5]
-print("\n5 Faskes dengan total sukses vaksin 2 terbanyak:")
-for faskes in sorted_faskes_vaksin2:
-    print(f"- {faskes['nama']}: {faskes['detail'][0]['divaksin_2']} vaksin")
+print("Faskes dengan total sukses vaksin 2 terbanyak:")
+for faskes in faskes_sorted_by_vaksin2[:5]:
+    print("Nama Faskes:", faskes.get("nama"))
+    print("Total Sukses Vaksin 2:", faskes.get("true"))
+    print("---")
 
